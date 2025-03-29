@@ -1,0 +1,5 @@
+torch>=1.12.1+cu113
+torchvision>=0.13.1+cu113
+dominate>=2.3.1
+visdom>=0.1.8.3
+numpy==1.26.4
