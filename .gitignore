@@ -1,3 +1,6 @@
+# 自定义
+backend/img/
+
 .DS_Store
 debug*
 datasets/

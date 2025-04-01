@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>照片转漫画风格转换器</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>照片转漫画风格转换器</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">选择要转换的图片：</label>
+                <input type="file" name="file" id="file" accept="image/*" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">转换为漫画风格</button>
+            </div>
+        </form>
+        <div class="loading" style="display: none;">
+            <p>正在转换您的图片... 这可能需要一点时间。</p>
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function() {
+            document.querySelector('.loading').style.display = 'block';
+            document.querySelector('button').disabled = true;
+        });
+    </script>
+</body>
+</html>

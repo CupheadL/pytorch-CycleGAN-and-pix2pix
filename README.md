@@ -14,3 +14,8 @@ python -m visdom.server
 python train.py --dataroot .\datasets\lol --name lol --model cycle_gan --num_threads 0
 ```
 当虚拟内存足够时，可以尝试将`--num_threads 0`参数删除。
+
+# 启动Web服务
+```shell
+python -m backend.app
+```

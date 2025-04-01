@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>转换结果</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>您的漫画风格图片</h1>
+        <div class="result-container">
+            <img src="{{ result_image }}" alt="转换后的图片" class="result-image">
+        </div>
+        <div class="actions">
+            <a href="{{ result_image }}" download="{{ original_filename }}_cartoon.png" class="btn">下载图片</a>
+            <a href="/" class="btn">转换另一张图片</a>
+        </div>
+    </div>
+</body>
+</html>
